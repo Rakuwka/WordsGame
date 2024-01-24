@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartController" customModule="WordsGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="2JD-Wa-BWZ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Words Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkx-HH-dmP">
+                                <rect key="frame" x="0.0" y="108" width="393" height="83"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.40784438775510207" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="7Zh-H8-lhq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" systemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="esL-yW-nRM">
+                                <rect key="frame" x="51" y="215" width="291" height="238"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Выберите слово" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kya-gi-I2f">
+                                        <rect key="frame" x="0.0" y="0.0" width="291" height="45"/>
+                                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="6Qs-L6-Noz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cnE-y0-7qc">
+                                        <rect key="frame" x="0.0" y="69" width="291" height="100"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Игрок 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMO-y5-ri6">
+                                                <rect key="frame" x="0.0" y="0.0" width="291" height="45"/>
+                                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Игрок 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GjK-d8-MRs">
+                                                <rect key="frame" x="0.0" y="55" width="291" height="45"/>
+                                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nQ-5n-z4O">
+                                        <rect key="frame" x="0.0" y="193" width="291" height="45"/>
+                                        <color key="backgroundColor" red="0.52612569832577316" green="0.17889521129816649" blue="0.34703928349344737" alpha="0.71686330782312924" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Старт!"/>
+                                        <connections>
+                                            <action selector="startTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YUP-dI-YHm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7nQ-5n-z4O" firstAttribute="height" secondItem="Kya-gi-I2f" secondAttribute="height" id="OJV-Wh-6iT"/>
+                                    <constraint firstItem="GjK-d8-MRs" firstAttribute="height" secondItem="Kya-gi-I2f" secondAttribute="height" id="aNt-Gq-tMe"/>
+                                    <constraint firstItem="kMO-y5-ri6" firstAttribute="height" secondItem="Kya-gi-I2f" secondAttribute="height" id="dRz-yK-Frt"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="esL-yW-nRM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0dF-BQ-McF"/>
+                            <constraint firstItem="esL-yW-nRM" firstAttribute="top" secondItem="dkx-HH-dmP" secondAttribute="bottom" constant="24" id="Igq-Y4-lzt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dkx-HH-dmP" secondAttribute="trailing" id="YnF-sv-Hcu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2JD-Wa-BWZ" secondAttribute="trailing" id="bhd-1w-dHp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="2JD-Wa-BWZ" secondAttribute="top" constant="59" id="bp6-ep-324"/>
+                            <constraint firstItem="2JD-Wa-BWZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gft-4z-07u"/>
+                            <constraint firstItem="dkx-HH-dmP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ggA-Cs-kOa"/>
+                            <constraint firstItem="dkx-HH-dmP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="kkV-Ab-fyF"/>
+                            <constraint firstItem="esL-yW-nRM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="mud-Tc-TFB"/>
+                            <constraint firstItem="2JD-Wa-BWZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="zrx-VQ-wu2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bigWordTF" destination="Kya-gi-I2f" id="uWv-im-NNW"/>
+                        <outlet property="firstNameTF" destination="kMO-y5-ri6" id="ehx-xO-8jp"/>
+                        <outlet property="secondNameTF" destination="GjK-d8-MRs" id="r1y-XO-7Z4"/>
+                        <outlet property="startButton" destination="7nQ-5n-z4O" id="qKw-wk-TKT"/>
+                        <segue destination="kD4-Ro-gd1" kind="show" identifier="toGameVC" id="ZTv-a5-rgy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+        </scene>
+        <!--GameVC-->
+        <scene sceneID="9N2-kS-a0F">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="kD4-Ro-gd1" customClass="GameVC" customModule="WordsGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dfQ-jA-y4K">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KXK-o0-0J6"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zTK-JH-V4m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VfN-UE-c5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BG" width="5472" height="3648"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
